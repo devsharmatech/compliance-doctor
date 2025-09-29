@@ -1,0 +1,10 @@
+.footerui {
+    background: linear-gradient(#000000, #011100);
+    padding-top: 145px;
+}
+.footerui p{
+    color: #858C93;
+}
+.text-gray{
+    color: #858C93;
+}

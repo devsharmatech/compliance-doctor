@@ -1,0 +1,23 @@
+.services-home
+ {
+  position: absolute;
+  bottom: -220px;
+  width: 100%; 
+  left: 0;
+}
+
+.prose ul li {
+    position: relative;
+    padding-left: 48px;
+    margin-bottom: 25px;
+}
+ 
+@media (max-width:768px) {
+  .services-home {
+    width: 93%;
+    bottom: -186px;
+    left: 4%;
+}
+}
+
+

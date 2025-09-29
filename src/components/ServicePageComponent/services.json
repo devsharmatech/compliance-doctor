@@ -1,0 +1,107 @@
+[
+    {
+      "name": "Proprietorship Registration",
+      "description": "Register your business as a sole proprietorship with ease. Ideal for individual entrepreneurs.",
+      "type": "startup",
+      "category": "Proprietorship",
+      "ctaLabel": "Subscribe",
+      "isActive": true
+    },
+    {
+      "name": "Partnership Firm Registration",
+      "description": "Form a partnership firm and get it registered for legal recognition and tax benefits.",
+      "type": "startup",
+      "category": "Partnership",
+      "ctaLabel": "Subscribe",
+      "isActive": true
+    },
+    {
+      "name": "One Person Company (OPC)",
+      "description": "Perfect for solo founders wanting limited liability and corporate status.",
+      "type": "startup",
+      "category": "One Person Company",
+      "ctaLabel": "Subscribe",
+      "isActive": true
+    },
+    {
+      "name": "LLP Registration",
+      "description": "Limited Liability Partnership is ideal for professionals and SMEs.",
+      "type": "startup",
+      "category": "Limited Liability Partnership",
+      "ctaLabel": "Subscribe",
+      "isActive": true
+    },
+    {
+      "name": "Private Limited Company Registration",
+      "description": "A flexible and scalable structure for startups and growing companies.",
+      "type": "startup",
+      "category": "Private Limited Company",
+      "ctaLabel": "Subscribe",
+      "isActive": true
+    },
+    {
+      "name": "Section 8 Company",
+      "description": "Non-profit organization registration for promoting charity, education, and more.",
+      "type": "startup",
+      "category": "Section 8 Company",
+      "ctaLabel": "Subscribe",
+      "isActive": true
+    },
+    {
+      "name": "Trust Registration",
+      "description": "Get your charitable trust registered under Indian Trusts Act.",
+      "type": "startup",
+      "category": "Trust Registration",
+      "ctaLabel": "Subscribe",
+      "isActive": true
+    },
+    {
+      "name": "Public Limited Company",
+      "description": "Register as a public limited company to raise capital from the public.",
+      "type": "startup",
+      "category": "Public Limited Company",
+      "ctaLabel": "Subscribe",
+      "isActive": true
+    },
+    {
+      "name": "Producer Company",
+      "description": "Ideal for farmers and agricultural businesses to form a company.",
+      "type": "startup",
+      "category": "Producer Company",
+      "ctaLabel": "Subscribe",
+      "isActive": true
+    },
+    {
+      "name": "Indian Subsidiary Registration",
+      "description": "Register a foreign company's subsidiary in India for expanding business.",
+      "type": "startup",
+      "category": "Indian Subsidiary",
+      "ctaLabel": "Subscribe",
+      "isActive": true
+    },
+    {
+      "name": "GST Registration",
+      "description": "Register your business under Goods & Services Tax (GST) law quickly and easily.",
+      "type": "general",
+      "icon": "gst-icon.svg",
+      "ctaLabel": "Apply Now",
+      "isActive": true
+    },
+    {
+      "name": "Import Export Code (IEC)",
+      "description": "Mandatory for businesses involved in import/export from India.",
+      "type": "general",
+      "icon": "import-export.svg",
+      "ctaLabel": "Get IEC",
+      "isActive": true
+    },
+    {
+      "name": "Trademark Registration",
+      "description": "Protect your brand name, logo, or slogan from infringement.",
+      "type": "general",
+      "icon": "trademark.svg",
+      "ctaLabel": "Protect Brand",
+      "isActive": true
+    }
+  ]
+  

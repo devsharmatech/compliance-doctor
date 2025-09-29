@@ -1,0 +1,8 @@
+.serviceherobg {
+    background: url('/images/vector.svg');
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    width: 100%;
+}

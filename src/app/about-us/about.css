@@ -1,0 +1,40 @@
+.abouttop {
+    background: 
+     url('/images/vector.svg'),
+    linear-gradient(#deeeff, #d3e3f4);
+           
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+    width: 100%;
+   
+}
+
+.aboutimg {
+    width: 631px;
+    height: 250px;
+}
+.image-conainer {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    /* height: 457px; */
+}
+.about-illustration ul li {
+  position: relative; /* to position the ::before element */
+  padding-left: 48px; /* space for the icon */
+  margin-bottom: 25px;
+}
+
+.about-illustration ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* transform: translateY(-50%); */
+  width: 38px;  /* icon width */
+  height: 328px; /* icon height */
+  background-image: url('/images/lifelong-learning.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+}

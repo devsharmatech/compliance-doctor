@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap');
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+
+
+
+
+/* Root Theme Variables */
+:root {
+  /* Basic Background and Text */
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Primary Colors */
+  --primary-bg: #1d7e0a;          /* Primary Action Background */
+  --primary-bg-hover: #166208;    /* Slightly Darker for Hover */
+  --primary-text: #036eb6;         /* Primary Text */
+  --primary-text-hover: #035a95;   /* Slightly Darker Text Hover */
+  
+  /* Secondary Colors */
+  --secondary-bg: #f0fdf4;         /* Light background for sections */
+  --secondary-text: #4b5563;       /* Subtle muted text */
+  
+  /* Accent Colors */
+  --accent: #10b981;               /* Accent for highlights (greenish) */
+  --accent-foreground: #ffffff;
+
+  /* Navbar */
+  --navbar-background:#ffffff; /* instead of #ffffff */
+  --navbar-text: var(--accent-foreground);
+  --navbar-background-hover: #dbd2d2;
+  --navbar-text-hover: var(--primary-bg);
+  --navbar-text-active: var(--primary-bg);
+  --navbar-text-active-hover: var(--primary-bg-hover);
+  --navbar-text-active-foreground: var(--accent-foreground);
+  --navbar-text-active-foreground-hover: var(--primary-bg);
+}
+
+/* Dark Mode Variables */
+@media (color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    --navbar-background: #07052c;
+    
+    --primary-bg: #145a07;
+    --primary-bg-hover: #0e4305;
+    --primary-text: #58aef5;
+    --primary-text-hover: #3998e6;
+
+    --secondary-bg: #111827;
+    --secondary-text: #9ca3af;
+    
+    --accent: #22d3ee;
+    --accent-foreground: #0f172a;
+  }
+}
+
+/* Base Styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+nav {
+ 
+  color: var(--navbar-background);
+  padding: 1rem;
+}
+.herobg{
+  position: relative;
+  background-image: url(../../public/images/HERO.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.herobg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.herotext {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+.button-radius{
+   background: linear-gradient(to bottom, #ffffff, #f6f6f6);
+  color: #000;
+  border: 4px solid #fff;
+  border-radius: 999px;
+  padding: 12px 24px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3); /* inner shadow */
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.update-alert{
+  margin-top: 314px;
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    padding: 10px 48px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 600 ;
+  /* font-family: 'Roboto', sans-serif !important; */
+  font-family: 'Red Hat Display', sans-serif;
+  
+}
+p{
+  font-size: 16px;
+  /* font-family: 'Roboto', sans-serif !important; */
+  font-family: 'Red Hat Display', sans-serif;
+  color: #171717;
+  margin-bottom: 15px;
+  line-height: 30px;
+}
+/* nav li:hover{
+ 
+  color:var(--foreground)
+} */
+
+/* Custom Utility Classes */
+.bg-primary {
+  background-color: var(--primary-bg);
+}
+
+.bg-current {
+  background-color: #cfd8e6;
+}
+header ul li a{
+  color: var(--foreground);
+}
+.bg-primary-hover:hover {
+  background-color: var(--primary-bg-hover);
+}
+
+.text-sm {
+    font-size: var(--text-sm) !important;
+   
+}
+
+.text-primary {
+  color: var(--primary-text);
+}
+
+.text-primary-hover:hover {
+  color: var(--primary-text-hover);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-bg);
+}
+
+.text-secondary {
+  color: var(--secondary-text);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.text-accent-foreground {
+  color: var(--accent-foreground);
+}
+
+/* Responsive Variants (if you want manually) */
+@media (min-width: 768px) {
+  .md\:bg-primary {
+    background-color: var(--primary-bg);
+  }
+  .md\:text-primary {
+    color: var(--primary-text);
+  }
+}
+
+
+/* global CSS or inside a module */
+.swiper-pagination {
+  margin-top: 20px;
+  bottom: 0 !important;
+  text-align: center;
+  position: static !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #94a3b8; /* soft gray */
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #1f2937; /* dark text */
+}
+ h4, h5, h6{
+  color: #1a202c;
+ }
+ .swiper-button-prev:after, .swiper-button-next:after{
+  font-size: 20px !important;
+ }
+
+ .prose {
+   scroll-margin-top: 100px;
+   padding-top:30px;
+}
+/* .prose > div:nth-child(odd) {
+    background-color: #FAFBFA;
+    border-radius: 30px;
+    border: 1px solid #EDEDED;
+    padding: 20px;
+} */
+.img-container-radius {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.prose h2{
+  font-size: 30px;
+  color: #326ee6;
+}
+ /* .prose ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background-image: url(/images/lifelong-learning.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+/* .prose ul li {
+  padding-left: 48px;
+    margin-bottom: 25px;
+    position: relative;
+}  */
+
+/* .prose > div:nth-child(odd) {
+  background-color:transparent;
+} */
+.minimum-requirement{
+   background-color: #FAFBFA;
+    border-radius: 30px;
+    border: 1px solid #EDEDED;
+    padding: 20px;
+}
+
+.border-radiustable {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #ededed !important;
+    padding: 15px;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Light gray */
+}
+
+table tr:nth-child(even) {
+  background-color: #ffffff; /* White */
+}
+
+/* .prose > div:nth-child(even) {
+  background-color: #ffffff; 
+} */
+
+/* .prose > div {
+  padding-left: 25px;
+  padding-right: 25px;
+} */
+
+.image-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.advantage p{
+  color: #fff;
+}
+.img-container-radius img{
+      object-fit: cover;
+    width: -webkit-fill-available;
+}
+.image-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-disc {
+  list-style-type:none !important
+}
+
+/* td {
+  border: 1px solid;
+}
+
+th {
+  border: 1px solid;
+  padding: 10px;
+} */
+
+.divide-transparent tr td {
+  padding: 10px;
+}
+
+.plpr {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.swiper-slide{
+  color: var(--foreground);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, .10);
+}
+
+
+/* .swiper-slide-active{
+  background-color: #001e3f;
+  color: var(--color-white);
+}
+.swiper-slide-active p{
+  color: #fff;
+} */
+.icon-bg{
+  background-color: #326ee6;
+  width: 45px;
+    height: 45px;
+    padding: 15px;
+    border-radius: 25px;
+}
+.swiper-button-prev, .swiper-button-next{
+  color: #fff !important;
+  background-color: #326ee6;
+  height: 40px !important;
+    width: 40px !important;
+    border-radius: 30px;
+    font-size: 14px;
+}
+.service-footer {
+    border-top: 1px solid #326EE633;
+}
+.button-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bg-blue{
+  background-color: #002144;
+  color: #fff;
+  width: 49%;
+}
+.bg-cyan{
+ background-color:  #EAF6FC;
+}
+.text-cyan{
+ color:  #59B4D1;
+}
+.light-blue-bg {
+    background: #022a55;
+    border-radius: 10px;
+    padding: 12px;
+}
+.light-blue-bg p{
+  color: #F5F5F599;
+}
+.light-blue-bg h5{
+  color: #fff;
+}
+
+.registerbtn {
+  border-radius: 100px;
+}
+
+.tabs {
+  border-radius: 10px
+}
+
+.tabcontainer {
+  border-radius: 8px;
+}
+
+.advantage {
+  border-radius: 20px
+}
+
+.advsidebar {
+  border-radius: 12px;
+}
+
+.middlebox {
+  border-radius: 16px;
+}
+
+.slugformbtn {
+  border-radius: 300px;
+}
+
+.consultimg {
+  border-radius: 25px;
+}
+
+.consultform {
+  border-radius: 18px;
+}
+
+.our-features p{
+  color: #326EE6 !important;
+  font-size: 22px !important;
+  font-weight: 500;
+}
+.our-features{
+  margin-bottom: 30px;
+}
+.our-features h2{
+  color: #0A2252;
+  font-size: 36px;
+  font-weight: 600;  
+}
+
+.our-features-parent {
+    width: 80%;
+    margin: auto;
+}
+.our-features-parent h4{
+  color: #0A2252;
+  font-size: 22px;
+  font-weight: 600;
+}
+.our-features-parent p{
+  font-size: 16px;
+  font-weight: 500;
+  color: #858C93;
+  line-height: normal;
+}
+.rating-location p{
+line-height: normal;
+margin-bottom: 0;
+}
+.color-blue{
+  color: #326EE6;
+}
+
+.step-count {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-left: 40px;
+}
+
+.step-count::before {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e0e0e0;
+}
+
+.step-item {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.step-icon {
+  position: absolute;
+  left: -29px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 2px solid #d0d0d0;
+  border-radius: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.plan h2{
+  font-size: 26px;
+}
+.plan-bgactive{
+  background-color: #326EE6;
+}
+.plan-bgactive p, .plan-bgactive li{
+  color: #fff;
+}
+/* You can change the icons below */
+.icon-dsc .step-icon {
+  background-image: url('/images/icons/dsc.png');
+}
+.icon-din .step-icon {
+  background-image: url('/images/icons/din.png');
+}
+.icon-name .step-icon {
+  background-image: url('/images/icons/name.png');
+}
+.icon-doc .step-icon {
+  background-image: url('/images/icons/doc.png');
+}
+.icon-filing .step-icon {
+  background-image: url('/images/icons/filing.png');
+}
+
+.step-content {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  margin-left: 40px;
+}
+
+.step-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.step-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+}
+
+@media (max-width:768px){
+  .update-alert{
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+  .bg-blue{
+    width: 100%;
+  }
+}

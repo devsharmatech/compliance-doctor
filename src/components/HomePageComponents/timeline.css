@@ -1,0 +1,78 @@
+/* timeline.css */
+
+.timeline-swiper {
+  padding: 20px 10px 40px;
+}
+
+
+
+
+
+.timeline-prev-btn:active,
+.timeline-next-btn:active {
+  transform: scale(0.95);
+}
+
+
+
+/* Swiper slide styling */
+.timeline-swiper .swiper-slide {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-swiper .swiper-slide-active {
+  opacity: 1;
+}
+
+.timeline-swiper .swiper-slide-next {
+  opacity: 0.9;
+}
+
+/* Custom scrollbar for swiper */
+.timeline-swiper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.timeline-swiper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-swiper {
+    padding: 15px 5px 30px;
+  }
+  
+  .timeline-prev-btn,
+  .timeline-next-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Hover effects for cards */
+.timeline-swiper .swiper-slide:hover {
+  opacity: 1;
+}
+
+/* Ensure proper z-index for overlap */
+section.relative {
+  position: relative;
+  z-index: 10;
+}
+
+/* Gradient border effect on hover */
+.timeline-swiper .swiper-slide .group:hover {
+  background: linear-gradient(135deg, white, white), 
+              linear-gradient(135deg, #10b981, #059669);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  border: 1px solid transparent;
+}
+
+button,a{
+ cursor: pointer !important;
+}

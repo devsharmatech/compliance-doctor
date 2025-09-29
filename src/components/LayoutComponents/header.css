@@ -1,0 +1,101 @@
+/* @import url("../../globals.css"); */
+
+.topMenu {    
+    background-color: #fff;
+    border-top: 1px solid #EAEAEF;
+    padding: 0px;
+    color: #333;
+}
+.topMenu div div ul li a:hover{
+    color: #111 !important;
+}
+
+.topMenu div div ul li a{
+   padding: 15px 5px;
+}
+.topMenu ul li ul li a:hover {
+    color: #333 !important;
+}
+.custom-position {
+    top: 60px;
+    box-shadow: 0px 4px 8px -2px #b6b4b4;
+    width: 530px;
+}
+.submenu-custom-postion {   
+    top: 50px;
+    width: auto;
+    box-shadow: 0px 4px 8px -2px #b6b4b4;
+}
+
+li:nth-child(1) .submenu-custom-postion
+
+ {
+    min-height: 300px;
+}
+.cunsoltandexpert{
+    background: linear-gradient(45deg, #326EE6, #0040C0);
+    color: #fff;    
+    font-weight: 400;
+    padding: 7px 13px;
+    border-radius: 30px;
+}
+.submenu-custom-postion div ul {
+    display: flex;
+    height: 435px;
+    flex-wrap: wrap;
+}
+
+.submenu-custom-postion ul li a{
+    padding: 5px 15px !important;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+}
+.submenu-custom-postion li.group.list-none {
+    /* display: block;
+    width: -webkit-fill-available; */
+    padding-top: 5px;
+}
+.submenu-custom-postion li.group.list-none span svg{
+    text-align: right;
+    height: 20px;
+    width: 20px;
+}
+.submenu-custom-postion ul li div.submenu-custom-postion{
+   width: 457px;
+    height:auto;
+    box-shadow: none;
+    background: #e5e7eb;
+    top: 0px;
+    right: -442px;
+}
+.submenu-custom-postion ul li div.submenu-custom-postion span svg{
+    display: none;
+}
+
+.consult-list ul li a:hover{
+    color: #000000;
+}
+@media (max-width:768px){
+    .cunsoltandexpert{
+        font-size: 14px;
+    }
+    .submenu-custom-postion {
+    width: 100%;
+    top: 62px;
+    box-shadow: 0 4px 8px -2px #b6b4b4;
+    height: -webkit-fill-available;
+    left: 3px;
+}
+.submenu-custom-postion ul li div.submenu-custom-postion{
+   width: 100%;
+    height:auto;
+    box-shadow: none;
+    background: #e5e7eb;
+    top: auto;
+    left: 0px;
+    right: 0px;
+}
+
+}

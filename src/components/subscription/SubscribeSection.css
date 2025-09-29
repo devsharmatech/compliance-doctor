@@ -1,0 +1,94 @@
+.subscribe-section {
+  position: relative;
+  
+  padding: 4rem 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  transform: translate(0px, 58px);
+}
+
+.subscribe-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.subscribe-title {
+  
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subscribe-subtitle {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 999px;
+  padding: 0.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: #333;
+  outline: none;
+}
+
+.subscribe-button {
+ 
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #1c2a4d;
+}
+
+/* Decorative blurred circles */
+.circle {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.top-left {
+  top: -120px;
+  left: -120px;
+}
+
+.bottom-right {
+  bottom: -120px;
+  right: -120px;
+}
+
+@media (max-width:768px){
+  .subscribe-section{
+    width: 92%;
+  }
+}
+
+

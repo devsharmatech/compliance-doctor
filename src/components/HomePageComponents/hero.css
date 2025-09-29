@@ -1,0 +1,8 @@
+.heroMenu {
+    background-image: url("/images/herobg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Or any height you need */
+    width: 100%;
+}
