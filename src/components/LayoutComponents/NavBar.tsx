@@ -70,17 +70,18 @@ export const Navbar = () => {
           {isAuthenticated ? (
             <Link
               href="/profile"
-              className="ml-2 flex items-center font-bold text-gray-700 hover:text-green-700 transition-colors duration-300"
+              className="ml-2 flex items-center font-bold text-gray-700 hover:text-blue-700 transition-colors duration-300"
             >
-              <FaUser size={22} /> <span className="ml-1 text-gray-700 hover:text-green-700 transition-colors duration-300 mt-2">Profile</span>
+              <FaUser size={22} /> <span className="ml-1 text-gray-700 hover:text-blue-700 transition-colors duration-300 mt-2">Profile</span>
             </Link>
           ) : (
             <Button
-              className="ml-2 px-5 py-2 rounded-full text-sm font-medium bg-green-600 text-white hover:bg-green-700 transition-all duration-300"
-              onClick={handleLoginClick}
-            >
-              Log In
-            </Button>
+  className="ml-2 px-5 py-2 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 whitespace-nowrap"
+  onClick={handleLoginClick}
+>
+  Log In
+</Button>
+
           )}
         </div>
 
