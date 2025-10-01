@@ -34,10 +34,10 @@ export default function Hero() {
   return (
     <div className="px-5 w-full">
       <section
-        className="text-white flex flex-col items-center justify-center px-4 py-12 pb-24 w-full 
+        className="text-white flex flex-col items-center justify-center px-1  md:px-4 py-12 pb-24 w-full 
     bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 rounded-2xl"
       >
-        <div className="max-w-4xl text-center mx-auto">
+        <div className="max-w-full md:max-w-4xl text-center mx-auto">
           {/* Heading */}
           <h1 className="text-[28px] sm:text-[32px] md:text-4xl lg:text-5xl font-bold leading-snug text-white">
             Expert Solutions for{" "}
@@ -73,9 +73,9 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="mt-10 flex justify-center w-full ">
+          <div className="mt-10 flex justify-center w-full px-2">
             <div className="flex w-full max-w-3xl bg-white rounded-full shadow-xl overflow-hidden border border-gray-200">
-              {/* Search Icon */}
+              {/* Search Icon (inside input) */}
               <div className="flex items-center pl-4 text-gray-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -97,28 +97,48 @@ export default function Hero() {
               <input
                 type="text"
                 placeholder="Search for services, solutions..."
-                className="flex-grow 
-               px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4
-               text-lg sm:text-base md:text-lg lg:text-xl
-               text-gray-700 outline-none
-               rounded-lg
-               transition"
+                className="flex-grow min-w-0
+        px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4
+        text-sm sm:text-base md:text-lg lg:text-xl
+        text-gray-700 outline-none
+        transition"
               />
 
               {/* Button */}
               <button
-                className="px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5
-               bg-gradient-to-r from-black to-black
-               text-white font-semibold
-               text-lg sm:text-base md:text-lg lg:text-xl
-               hover:from-gray-700 hover:to-gray-900
-               rounded-full
-               transition-all duration-300"
+                className="flex-shrink-0 
+        px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5
+        bg-gradient-to-r from-black to-black
+        text-white font-semibold
+        hover:from-gray-700 hover:to-gray-900
+        rounded-full
+        transition-all duration-300
+        flex items-center justify-center"
               >
-                Search
+                {/* Show text on md+ screens */}
+                <span className="hidden sm:inline text-sm sm:text-base md:text-lg lg:text-xl">
+                  Search
+                </span>
+
+                {/* Show only icon on mobile */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="sm:hidden h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+                  />
+                </svg>
               </button>
             </div>
           </div>
+
         </div>
 
         {/* Enquiry Modal */}
